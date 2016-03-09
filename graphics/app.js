@@ -7,5 +7,6 @@ function buildApp(app) {
         host.currentText=newVal.current;
         host.goalText="Goal: " + newVal.goal;
         host.percentage=newVal.current/newVal.goal;
+        if (app == "tips") host.typeText = newVal.text
     });
 }
