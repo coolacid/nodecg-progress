@@ -25,7 +25,17 @@
           }
         ],
         "graphics": [{
-            "file": "index.html",
+            "file": "subs.html",
+            "width": 1280,
+            "height": 720,
+            "singleInstance": false
+        },{
+            "file": "tips.html",
+            "width": 1280,
+            "height": 720,
+            "singleInstance": false
+        },{
+            "file": "followers.html",
             "width": 1280,
             "height": 720,
             "singleInstance": false
