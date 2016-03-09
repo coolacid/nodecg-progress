@@ -8,7 +8,9 @@ function buildApp(app, type) {
     console.log("Subcount now: " + newVal.current);
         switch (type) {
             case "round": 
-                updateRound(app, newVal)
+                updateRound(app, newVal);
+            case "bar":
+                updateBar(app, newVal);
         }
     });
 }
@@ -22,3 +24,7 @@ function updateRound(app, newVal) {
     if (app == "tips") host.typeText = newVal.text
 }
 
+function updateBar(app, newVal) {
+    var element = document.querySelector("#bars");
+    element.barValue=Number(newVal.current/newVal.goal*100);
+}

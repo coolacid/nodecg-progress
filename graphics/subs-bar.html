@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <script src="components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="import" href="components/material-progress/material-progress-bars.html">
+
+  </head>
+
+  <body>
+<template is="dom-bind" id="bars">
+<style is="custom-style">
+  material-progress-bars {
+    width: 100%;
+    @apply(--paper-font-body2);
+  }
+  material-progress-bars > .bar > span {
+    text-align: end;
+    font-size: 0.9em;
+    @apply(--layout-flex);
+  }
+  .bar {
+    background-color: var(--paper-deep-orange-500);
+  }
+  .bar.run {
+    background-color: var(--paper-purple-500);
+  }
+  .bar.hello {
+    background-color: var(--paper-cyan-500);
+  }
+  .bar.world {
+    background-color: var(--paper-orange-500);
+  }
+</style>
+
+<material-progress-bars max="100" bar-height="22" animated>
+  <div class="bar" data-value="[[barValue]]">
+    <span>World</span>
+  </div>
+</material-progress-bars>
+</template>
+    <script>
+    (function() {
+        buildApp('subs', 'bar');
+    })();
+    </script>
+  </body>
+</html>
