@@ -11,6 +11,10 @@ module.exports = function(nodecg) {
 //    var sublistener = nodecg.extensions['lfg-sublistener'];
 
     nucleus.on('subscription', function subscription(data) {
-        subsRep.value.current = subcount.value.current + 1;
+        subsRep.value.current = subsRep.value.current + 1;
+    });
+
+    nucleus.on('tip', function subscription(data) {
+        TipsRep.value.current = TipsRep.value.current + data.amount;
     });
 };
