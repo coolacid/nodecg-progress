@@ -43,6 +43,11 @@
             "height": 720,
             "singleInstance": false
         },{
+            "file": "followers-bar.html",
+            "width": 1280,
+            "height": 720,
+            "singleInstance": false
+        },{
             "file": "subs.html",
             "width": 1280,
             "height": 720,
