@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1">
     <title></title>
     <script src="components/webcomponentsjs/webcomponents-lite.min.js"></script>
     <link rel="stylesheet" href="components/paper-styles/paper-styles.html">
@@ -15,47 +16,74 @@
             margin-top: 10px;
             margin-right: 8px;
         }
-
-        #Column {
-                width: calc(100% - 8px);
-                height: 500px
-        }
-
-        #buttons {
-            @apply(--layout-horizontal);
-            margin-bottom: 12px;
-        }
-
-        paper-button {
-            display: block;
-            margin: 0;
-        }
-
-        #clear {
-            @apply(--layout-flex);
-            margin-left: 8px;
-        }
-
-        #send {
-            margin-bottom: 8px;
-        }
-
         h5 {
             margin-bottom: 0;
+        }
+        .column {
+            width: 50%;
+            margin: 0 4px;
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+        .column:first-of-type {
+            margin-right: 4px;
+            margin-left: 0;
+        }
+        .column:last-of-type {
+            margin-right: 0;
+            margin-left: 4px;
+        }
+        .item-line {
+            display: flex;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .item-label {
+            font-size: 80%;
+            text-transform: uppercase;
+        }
+        .item-value {
+            font-weight: bold;
+            font-size: 200%;
         }
     </style>
 </head>
 <body>
-<div id="Column">
-    <h5>Goals</h5>
-        <paper-tabs id="tabs" selected="{{selected}}">
-                <paper-tab>SUBSCRIPTION</paper-tab>
-                <paper-tab>TIP</paper-tab>
-                <paper-tab>FOLLOWERS</paper-tab>
-        </paper-tabs>
-    <div style="display: flex; id="sub">
-        <paper-input id="subcount" label="Count" type="number" style="flex-shrink: 4; margin-right: 8px;"></paper-input>
-        <paper-input id="subgoal" label="Goal" type="number" style="flex-shrink: 4;"></paper-input>
+<div>
+    <h5>Subs</h5>
+    <div class="item-line">
+        <div class="column">
+            <div class="item-label">Count</div>
+            <div class="item-value" data-field="subcount">?</div>
+        </div>
+        <div class="column">
+            <div class="item-label">Goal</div>
+            <div class="item-value" data-field="subgoal">?</div>
+        </div>
+    </div>
+
+    <h5>Followers</h5>
+    <div class="item-line">
+        <div class="column">
+            <div class="item-label">Count</div>
+            <div class="item-value" data-field="followercount">?</div>
+        </div>
+        <div class="column">
+            <div class="item-label">Goal</div>
+            <div class="item-value" data-field="followergoal">?</div>
+        </div>
+    </div>
+
+    <h5>Tips: <span class="tiptext-value" data-field="tiptext">?</span></h5>
+    <div class="item-line">
+        <div class="column">
+            <div class="item-label">Count</div>
+            <div class="item-value" data-field="tipcount">?</div>
+        </div>
+        <div class="column">
+            <div class="item-label">Goal</div>
+            <div class="item-value" data-field="tipgoal">?</div>
+        </div>
     </div>
     <paper-button nodecg-dialog="settings" class="nodecg-configure" raised>Change Settings</paper-button>
 </div>
