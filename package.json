@@ -1,0 +1,34 @@
+{
+    "name": "nodecg-progress",
+    "version": "0.0.1",
+    "description": "Progress meters for nodecg",
+    "authors": [
+        "Jason Kendall"
+    ],
+    "homepage": "",
+    "license": "",
+    "extension": {
+        "path": "extension.js"
+    },
+    "nodecg": {
+        "compatibleRange": "~0.7.0",
+        "bundleDependencies": {
+          "lfg-nucleus": "^1.1.0"
+        },
+        "dashboardPanels": [
+          {
+            "name": "Progress",
+            "title": "Progress",
+            "width": 3,
+            "headerColor": "#564573",
+            "file": "panel.html"
+          }
+        ],
+        "graphics": [{
+            "file": "index.html",
+            "width": 1280,
+            "height": 720,
+            "singleInstance": false
+        }]
+    }
+}
