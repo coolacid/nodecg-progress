@@ -12,9 +12,6 @@
     },
     "nodecg": {
         "compatibleRange": "~0.7.0",
-        "bundleDependencies": {
-          "lfg-nucleus": "^1.1.0"
-        },
         "dashboardPanels": [
           {
             "name": "Progress",

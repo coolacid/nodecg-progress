@@ -17,16 +17,23 @@ module.exports = function(nodecg) {
             TipsRep.value.current = TipsRep.value.current + data.amount;
         });
     } else {
-        var streamTip = nodecg.extensions['lfg-streamtip'];
-        var sublistener = nodecg.extensions['lfg-sublistener'];
+        if (Object(nodecg.extensions).hasOwnProperty('lfg-streamtip')) {
+            var streamTip = nodecg.extensions['lfg-streamtip'];
+            streamTip.on('tip',function tip(data) {
+                TipsRep.value.current = TipsRep.value.current + data.amount;
+            });
+        } else {
+            nodecg.log.warn("WARNING! You are missing lfg-nucleus and lfg-streamtip, will not track tips");
+        }
 
-        streamTip.on('tip',function tip(data) {
-            TipsRep.value.current = TipsRep.value.current + data.amount;
-        });
-
-        sublistener.on('subscription',function subscription(data) {
-            subsRep.value.current = subsRep.value.current + 1;
-        });
+        if (Object(nodecg.extensions).hasOwnProperty('lfg-sublistener')) {
+            var sublistener = nodecg.extensions['lfg-sublistener'];
+            sublistener.on('subscription',function subscription(data) {
+                subsRep.value.current = subsRep.value.current + 1;
+            });
+        } else {
+            nodecg.log.warn("WARNING! You are missing lfg-nucleus and lfg-sublistener, will not track subs");
+        }
     }
 
 };
