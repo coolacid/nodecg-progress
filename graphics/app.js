@@ -1,12 +1,24 @@
-function buildApp(app) {
+function buildApp(app, type) {
+
     var countreplicant = nodecg.Replicant(app);
-    var host = document.querySelector("d3-progress-meter");
-    
+
+    if (type === undefined) type = "round";
+
     countreplicant.on('change', function(oldVal, newVal) {
-        console.log("Subcount now: " + newVal.current);
-        host.currentText=newVal.current;
-        host.goalText="Goal: " + newVal.goal;
-        host.percentage=newVal.current/newVal.goal;
-        if (app == "tips") host.typeText = newVal.text
+    console.log("Subcount now: " + newVal.current);
+        switch (type) {
+            case "round": 
+                updateRound(app, newVal)
+        }
     });
 }
+
+
+function updateRound(app, newVal) {
+    var element = document.querySelector("d3-progress-meter");
+    element.currentText=newVal.current;
+    element.goalText="Goal: " + newVal.goal;
+    element.percentage=newVal.current/newVal.goal;
+    if (app == "tips") host.typeText = newVal.text
+}
+
