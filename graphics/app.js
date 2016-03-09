@@ -25,6 +25,6 @@ function updateRound(app, newVal) {
 }
 
 function updateBar(app, newVal) {
-    var element = document.querySelector("#bars");
-    element.barValue=Number(newVal.current/newVal.goal*100);
+    document.querySelector('material-progress-bars').querySelector('.bar').setAttribute('data-value',Number(newVal.current/newVal.goal*100));
 }
+
