@@ -22,6 +22,21 @@
             "width": 3,
             "headerColor": "#564573",
             "file": "panel.html"
+          },{
+            "name": "settings",
+            "title": "Set Progress Settings",
+            "width": 3,
+            "file": "dialogs/settings.html",
+            "dialog": true,
+            "dialogButtons": [
+            {
+                "name": "Confirm",
+                "type": "confirm"
+            },
+            {
+                "name": "Cancel",
+                "type": "dismiss"
+            }]
           }
         ],
         "graphics": [{

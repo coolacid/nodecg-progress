@@ -3,7 +3,7 @@
 
 module.exports = function(nodecg) {
     var subsRep = nodecg.Replicant('subs', {defaultValue: {current: 0, goal: 100}});
-    var TipsRep = nodecg.Replicant('tips', {defaultValue: {current: 0, goal: 100}});
+    var TipsRep = nodecg.Replicant('tips', {defaultValue: {current: 0, goal: 100, text: ""}});
     var FollowersRep = nodecg.Replicant('followers', {defaultValue: {current: 0, goal: 100}});
 
     var nucleus = nodecg.extensions['lfg-nucleus'];

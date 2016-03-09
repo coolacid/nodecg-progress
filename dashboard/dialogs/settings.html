@@ -47,18 +47,27 @@
 </head>
 <body>
 <div id="Column">
-    <h5>Goals</h5>
-        <paper-tabs id="tabs" selected="{{selected}}">
-                <paper-tab>SUBSCRIPTION</paper-tab>
-                <paper-tab>TIP</paper-tab>
-                <paper-tab>FOLLOWERS</paper-tab>
-        </paper-tabs>
+    <h5>Sub Goal</h5>
     <div style="display: flex; id="sub">
         <paper-input id="subcount" label="Count" type="number" style="flex-shrink: 4; margin-right: 8px;"></paper-input>
         <paper-input id="subgoal" label="Goal" type="number" style="flex-shrink: 4;"></paper-input>
     </div>
-    <paper-button nodecg-dialog="settings" class="nodecg-configure" raised>Change Settings</paper-button>
+    <BR>
+    <h5>Follower Goal</h5>
+    <div style="display: flex; id="follower">
+        <paper-input id="followercount" label="Count" type="number" style="flex-shrink: 4; margin-right: 8px;"></paper-input>
+        <paper-input id="followergoal" label="Goal" type="number" style="flex-shrink: 4;"></paper-input>
+    </div>
+    <BR>
+    <h5>Tip Goal</h5>
+    <div style="display: flex; id="tipnum">
+        <paper-input id="tipcount" label="Count" type="number" style="flex-shrink: 4; margin-right: 8px;"></paper-input>
+        <paper-input id="tipgoal" label="Goal" type="number" style="flex-shrink: 4;"></paper-input>
+    </div>
+    <div style="display: flex; id="tiptext">
+        <paper-input id="tiptext" label="Tip Text" type="text" style="flex-shrink: 4;"></paper-input>
+    </div>
 </div>
-<script src="panel.js"></script>
+<script src="dialogs/settings.js"></script>
 </body>
 </html>
