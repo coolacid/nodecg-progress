@@ -9,8 +9,10 @@ function buildApp(app, type) {
         switch (type) {
             case "round": 
                 updateRound(app, newVal);
+                break;
             case "bar":
                 updateBar(app, newVal);
+                break;
         }
     });
 }
