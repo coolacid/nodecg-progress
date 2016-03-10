@@ -6,7 +6,7 @@
     "paper-input": "PolymerElements/paper-input#^1.0.18",
     "paper-button": "PolymerElements/paper-button#^1.0.11",
     "d3-progress-meter": "Collaborne/d3-progress-meter",
-    "polymer-color-picker": "notwaldorf/polymer-color-picker",
+    "paper-swatch-picker": "PolymerElements/paper-swatch-picker",
     "material-progress": "vguillou/material-progress"
   },
   "install" : {
