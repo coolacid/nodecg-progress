@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="components/paper-styles/paper-styles.html">
     <link rel="import" href="components/paper-button/paper-button.html">
     <link rel="import" href="components/paper-input/paper-input.html">
-    <link rel="import" href="components/paper-tabs/paper-tab.html">
-    <link rel="import" href="components/paper-tabs/paper-tabs.html">
+    <link rel="import" href="components/polymer-color-picker/polymer-color-picker.html">
     <style is="custom-style">
         body {
             @apply(--layout-horizontal);
@@ -49,18 +48,21 @@
 <div id="Column">
     <h5>Sub Goal</h5>
     <div style="display: flex; id="sub">
+        <polymer-color-picker id='subColor'></polymer-color-picker>
         <paper-input id="subcount" label="Count" type="number" style="flex-shrink: 4; margin-right: 8px;"></paper-input>
         <paper-input id="subgoal" label="Goal" type="number" style="flex-shrink: 4;"></paper-input>
     </div>
     <BR>
     <h5>Follower Goal</h5>
     <div style="display: flex; id="follower">
+        <polymer-color-picker id='followerColor'"></polymer-color-picker>
         <paper-input id="followercount" label="Count" type="number" style="flex-shrink: 4; margin-right: 8px;"></paper-input>
         <paper-input id="followergoal" label="Goal" type="number" style="flex-shrink: 4;"></paper-input>
     </div>
     <BR>
     <h5>Tip Goal</h5>
     <div style="display: flex; id="tipnum">
+        <polymer-color-picker id='tipColor'></polymer-color-picker>
         <paper-input id="tipcount" label="Count" type="number" style="flex-shrink: 4; margin-right: 8px;"></paper-input>
         <paper-input id="tipgoal" label="Goal" type="number" style="flex-shrink: 4;"></paper-input>
     </div>
