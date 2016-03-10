@@ -28,8 +28,11 @@ function updateRound(app, newVal) {
 
 function updateBar(app, newVal) {
     var element = document.querySelector('material-progress-bars').querySelector('.bar');
-    element.setAttribute('data-value',Number(newVal.current/newVal.goal*100));
+    element.setAttribute('data-value', Number(newVal.current/newVal.goal*100));
+    element.setAttribute('data-legend', "Goal: " + newVal.goal);
     element.style.backgroundColor = newVal.color;
-    if (app == "tips") element.querySelector('span').innerHTML = newVal.text
+    if (app == "tips") element.querySelector('span').innerHTML = newVal.text + ": $" + newVal.current;
+    if (app == "followers") element.querySelector('span').innerHTML = "Followers: " + newVal.current;
+    if (app == "subs") element.querySelector('span').innerHTML = "Subs: " + newVal.current;
 }
 
