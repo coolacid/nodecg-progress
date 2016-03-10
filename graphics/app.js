@@ -27,7 +27,9 @@ function updateRound(app, newVal) {
 }
 
 function updateBar(app, newVal) {
-    document.querySelector('material-progress-bars').querySelector('.bar').setAttribute('data-value',Number(newVal.current/newVal.goal*100));
-    document.querySelector('material-progress-bars').querySelector('.bar').style.backgroundColor = newVal.color;
+    var element = document.querySelector('material-progress-bars').querySelector('.bar');
+    element.setAttribute('data-value',Number(newVal.current/newVal.goal*100));
+    element.style.backgroundColor = newVal.color;
+    if (app == "tips") element.querySelector('span').innerHTML = newVal.text
 }
 

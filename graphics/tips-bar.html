@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <script src="app.js"></script>
+    <script src="components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="import" href="components/paper-styles/color.html">
+    <link rel="import" href="components/material-progress/material-progress-bars.html">
+
+  </head>
+
+  <body>
+<style is="custom-style">
+  material-progress-bars {
+    width: 100%;
+    @apply(--paper-font-body2);
+  }
+  material-progress-bars > .bar > span {
+    text-align: end;
+    font-size: 0.9em;
+    @apply(--layout-flex);
+  }
+  .bar {
+    background-color: var(--paper-deep-orange-500);
+  }
+</style>
+
+<material-progress-bars max="100" bar-height="22" animated>
+  <div class="bar" data-value="1">
+    <span>Followers</span>
+  </div>
+</material-progress-bars>
+
+    <script>
+    (function() {
+        buildApp('tips', 'bar');
+    })();
+    </script>
+  </body>
+</html>
