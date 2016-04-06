@@ -1,4 +1,7 @@
 #nodecg-progress
+
+![Image](preview.png)
+
 This is a [NodeCG](http://github.com/nodecg/nodecg) bundle.
 
 Listens for Sub, Tip and Follower events from multiple different helper bundles and increases a colourful graphics counter.
