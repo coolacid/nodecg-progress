@@ -23,7 +23,7 @@ function updateRound(app, newVal) {
     element.currentText=newVal.current;
     element.goalText="Goal: " + newVal.goal;
     element.percentage=newVal.current/newVal.goal;
-    if (app == "tips") host.typeText = newVal.text
+    if (app == "tips") element.typeText = newVal.text
 }
 
 function updateBar(app, newVal) {
